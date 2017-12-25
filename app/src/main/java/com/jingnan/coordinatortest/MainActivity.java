@@ -11,6 +11,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -28,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
 
     private Toast mToast;
 
+    private TextView mTextView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(mToolbar);
 
         mLayoutParams = (AppBarLayout.LayoutParams) mToolbar.getLayoutParams();
+
+        mTextView = findViewById(R.id.text_view);
 
         initData();
         mRecyclerView = findViewById(R.id.mRecyclerView);
@@ -88,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
         mToolbar.setLayoutParams(mLayoutParams);
+        mTextView.setLayoutParams(mLayoutParams);
         return super.onOptionsItemSelected(item);
     }
 

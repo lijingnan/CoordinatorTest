@@ -48,7 +48,7 @@
 
 3. SCROLL_FLAG_EXIT_UNTIL_COLLAPSED
 
-    这个没有试出效果，暂且不说；
+    只有AppBarLayout的子View大于1的时候才有效
 
 4. SCROLL_FLAG_SCROLL
 
@@ -58,6 +58,8 @@
 
     这个的效果跟SCROLL_FLAG_ENTER_ALWAYS_COLLAPSED基本一样，只是在Toolbar显示和隐藏的时候有点区别：如果Toolbar显示"过半"则全部显示，隐藏"过半"则全部隐藏；
     
+6. 当AppBarLayout有多个子View都设置了ScrollFlag时，滑动事件会按照顺序依次判断对该view执行那种flag，例如demo中有5个子view，当上滑时是从上往下依次执行对应的flag，当下滑时也是依次执行对应的flag；
+
 # ScrollFlags的设置方式
 
 1. 在xml代码里直接设置

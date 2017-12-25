@@ -15,13 +15,48 @@
             android:theme="@style/AppTheme.AppBarOverlay"
             >
 
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:gravity="center"
+                android:text="我是 enterAlways"
+                app:layout_scrollFlags="scroll|enterAlways"
+                />
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:text="我是 snap"
+                android:gravity="center"
+                app:layout_scrollFlags="scroll|snap"
+                android:background="#000"
+                />
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:text="我是 enterAlwaysCollapsed"
+                android:gravity="center"
+                app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
+                />
+
+        <TextView
+                android:id="@+id/text_view"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="#000"
+                android:gravity="center"
+                android:text="我是 exitUntilCollapsed，和下边的Toolbar一样"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                />
+
         <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:background="?attr/colorPrimary"
-                app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
                 app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
                 />
 
     </android.support.design.widget.AppBarLayout>
